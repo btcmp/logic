@@ -2,7 +2,7 @@ package logic_5;
 
 import java.util.Arrays;
 
-public class Soal1 {
+public class Template {
 
 	//variable untuk max horizontal
 	//variable untuk max vertical
@@ -41,41 +41,15 @@ public class Soal1 {
 	}
 	
 	public void setDataArray(int n){
-		this.kolom = this.getTriangular(n);
-		this.baris = this.kolom;
+		this.kolom = n;
+		this.baris = n;
 		this.data = new String[this.baris][this.kolom];
-		int[] dataArr = this.getTriangularArr(n);
 		
-		for(int bangun = 0; bangun < n; bangun++){
-			for(int i = 0; i < this.baris; i++){
-				for(int j = 0; j < this.kolom; j++){
-					//manual node
-					for(int i2 = dataArr[bangun]; i2 < dataArr[bangun+1]; i2++){
-						for(int j2 = dataArr[bangun]; j2 < dataArr[bangun+1]; j2++){
-							this.data[i2][j2] = "*";
-						}
-					}
-					
-					/*for(int i2 = 1; i2 < 3; i2++){
-						for(int j2 = 1; j2 < 3; j2++){
-							this.data[i2][j2] = "*";
-						}
-					}
-					
-					for(int i2 = 3; i2 < 6; i2++){
-						for(int j2 = 3; j2 < 6; j2++){
-							this.data[i2][j2] = "*";
-						}
-					}
-					for(int i2 = 6; i2 < 10; i2++){
-						for(int j2 = 6; j2 < 10; j2++){
-							this.data[i2][j2] = "*";
-						}
-					}*/
-				}
+		for(int i = 0; i < this.baris; i++){
+			for(int j = 0; j < this.kolom; j++){
+				//manual node
 			}
 		}
-		
 	}
 	
 	//merepresentasikan isi dalam data matrix
@@ -89,7 +63,7 @@ public class Soal1 {
 	}
 	
 	public static void main(String args[]){
-		Soal1 jawab = new Soal1();
+		Template jawab = new Template();
 		int n = 4;
 		jawab.setDataArray(n);
 		jawab.showData();
